@@ -10,10 +10,10 @@
 		02C3BB3B5D8B9E9C250D95FF /* Pods_drive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB788A839E780892B18172C0 /* Pods_drive.framework */; };
 		2847FE0027D5F501674B6466 /* Pods_driveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF8A88C109D62F4BF954502 /* Pods_driveUITests.framework */; };
 		69134B5D1EB1221A00AEB39F /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69134B5C1EB1221A00AEB39F /* EntryViewController.swift */; };
-		69134B5F1EB1275400AEB39F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 69134B5E1EB1275400AEB39F /* GoogleService-Info.plist */; };
 		69134B611EB1276900AEB39F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69134B601EB1276900AEB39F /* LoginViewController.swift */; };
 		69134B651EB12C4000AEB39F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69134B641EB12C4000AEB39F /* User.swift */; };
 		69134B671EB12EA400AEB39F /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69134B661EB12EA400AEB39F /* CreateViewController.swift */; };
+		693707B21ECB56E7007F6DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 693707B11ECB56E7007F6DC9 /* GoogleService-Info.plist */; };
 		6980D7DF1EB8EBDD00E09D62 /* MainScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6980D7DE1EB8EBDD00E09D62 /* MainScoreViewController.swift */; };
 		69E925591EAFB4DF00AE0A3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E925581EAFB4DF00AE0A3B /* AppDelegate.swift */; };
 		69E9255E1EAFB4DF00AE0A3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E9255C1EAFB4DF00AE0A3B /* Main.storyboard */; };
@@ -50,10 +50,10 @@
 		53C6BA6B0A032719111EA921 /* Pods-drive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drive/Pods-drive.debug.xcconfig"; sourceTree = "<group>"; };
 		60D454AC0D0178A70E863169 /* Pods-driveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-driveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-driveTests/Pods-driveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69134B5C1EB1221A00AEB39F /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
-		69134B5E1EB1275400AEB39F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		69134B601EB1276900AEB39F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		69134B641EB12C4000AEB39F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		69134B661EB12EA400AEB39F /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		693707B11ECB56E7007F6DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6980D7DE1EB8EBDD00E09D62 /* MainScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScoreViewController.swift; sourceTree = "<group>"; };
 		69E925551EAFB4DF00AE0A3B /* drive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E925581EAFB4DF00AE0A3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,11 +136,11 @@
 				69E925581EAFB4DF00AE0A3B /* AppDelegate.swift */,
 				69E9255C1EAFB4DF00AE0A3B /* Main.storyboard */,
 				6980D7DE1EB8EBDD00E09D62 /* MainScoreViewController.swift */,
+				693707B11ECB56E7007F6DC9 /* GoogleService-Info.plist */,
 				69134B661EB12EA400AEB39F /* CreateViewController.swift */,
 				69134B641EB12C4000AEB39F /* User.swift */,
 				69E925621EAFB4DF00AE0A3B /* Assets.xcassets */,
 				69E925641EAFB4DF00AE0A3B /* LaunchScreen.storyboard */,
-				69134B5E1EB1275400AEB39F /* GoogleService-Info.plist */,
 				69E925671EAFB4DF00AE0A3B /* Info.plist */,
 				69E9255F1EAFB4DF00AE0A3B /* drive.xcdatamodeld */,
 			);
@@ -326,7 +326,7 @@
 				69E925631EAFB4DF00AE0A3B /* Assets.xcassets in Resources */,
 				69E9258D1EAFB87400AE0A3B /* noun_72.png in Resources */,
 				69E9255E1EAFB4DF00AE0A3B /* Main.storyboard in Resources */,
-				69134B5F1EB1275400AEB39F /* GoogleService-Info.plist in Resources */,
+				693707B21ECB56E7007F6DC9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,10 +648,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z83798CH9Q;
 				INFOPLIST_FILE = drive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trevorsalom.drive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -662,10 +664,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z83798CH9Q;
 				INFOPLIST_FILE = drive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.trevorsalom.drive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

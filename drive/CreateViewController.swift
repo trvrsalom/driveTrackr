@@ -62,7 +62,7 @@ class CreateViewController: UIViewController {
                                 "password": self.password.text,
                                 "drives": [],
                                 "scores": [],
-                                "overall": 1
+                                "overall": 0.5
                             ])
                         self.performSegue(withIdentifier: "accountCreated", sender: nil)
                     }

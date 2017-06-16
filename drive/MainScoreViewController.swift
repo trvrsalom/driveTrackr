@@ -20,8 +20,12 @@ class MainScoreViewController: UIViewController {
     var username : String = ""
     var user : Dictionary<String, Any> = [:]
     var motionManager: CMMotionManager!
+    var auto = false;
+    let activityManager = CMMotionActivityManager()
+    var oldLocation : CLLocation = CLLocation.init()
+    var sum = 0.0;
+    var count = 0.0;
     
-    @IBOutlet weak var mapView: MKMapView!
     fileprivate var locations = [MKPointAnnotation]()
     private lazy var locationManager: CLLocationManager = {
         let manager = CLLocationManager()
@@ -76,7 +80,13 @@ class MainScoreViewController: UIViewController {
         }) { (error) in
             print(error.localizedDescription)
         }
-        print(user)
+        if(CMMotionActivityManager.isActivityAvailable()) {
+            self.activityManager.startActivityUpdates(to: OperationQueue.current!, withHandler: {
+                activityData
+                in
+                self.auto = (activityData?.automotive)!
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,39 +109,36 @@ class MainScoreViewController: UIViewController {
 
 extension MainScoreViewController: CLLocationManagerDelegate {
     
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let mostRecentLocation = locations.last else {
-            return
+        
+        if(oldLocation === nil) {
+            oldLocation = locations.last!;
         }
+        var currLocation = locations.last
+        var speedDelta = (currLocation?.speed)! - oldLocation.speed
+        var deltaT = currLocation?.timestamp.timeIntervalSince(oldLocation.timestamp)
+        sum = sum + (speedDelta as! Double);
+        count = count + 1;
+        var average = sum/(count as! Double);
         
-        // Add another annotation to the map.
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = mostRecentLocation.coordinate
-        
-        // Also add to our map so we can remove old values later
-        self.locations.append(annotation)
-        
-        // Remove values if the array is too big
-        while locations.count > 100 {
-            let annotationToRemove = self.locations.first!
-            self.locations.remove(at: 0)
-            
-            // Also remove from the map
-            mapView.removeAnnotation(annotationToRemove)
-        }
-        
-        if UIApplication.shared.applicationState == .active {
-            print("App is backgrounded. New location is %@", mostRecentLocation)
-            mapView.showAnnotations(self.locations, animated: true)
-            /*if let accelerometerData = motionManager.accelerometerData {
-                print("\(accelerometerData.acceleration.y)")
-            }
-            else {
-                print("use a phone")
-            }*/
-        } else {
-            print("App is backgrounded. New location is %@", mostRecentLocation)
-        }
+        var err = abs(((0.5 - average)/0.5) * 1);
+        print(err);
+        var score = 100 - err;
+        var scoreStr = String(format: "%.0f", score)
+        self.scoreLabel.text = "\(scoreStr)%";
+        //ref.child("users").child(username).child("overall").setValue(score/100)
+        oldLocation = locations.last!;
+        /*
+        if(self.auto && locations.count > 2) {
+            var oldLocation = locations[locations.count-2]
+            var currLocation = locations.last
+            var speedDelta = (currLocation?.speed)! - oldLocation.speed
+            var deltaT = currLocation?.timestamp.timeIntervalSince(oldLocation.timestamp)
+            print(speedDelta)
+        }*/
+
     }
     
 }

@@ -247,43 +247,29 @@
                                     <color key="titleColor" red="0.97670762519999998" green="0.98968728120000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c7c-eJ-XKP">
-                                <rect key="frame" x="0.0" y="298" width="375" height="369"/>
-                            </mapView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FXj-Si-sQy">
-                                <rect key="frame" x="0.0" y="298" width="375" height="369"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c7c-eJ-XKP" firstAttribute="leading" secondItem="Wd5-vN-IrD" secondAttribute="leading" id="1Ci-MO-OA9"/>
                             <constraint firstItem="Yep-LV-p74" firstAttribute="top" secondItem="MLx-iR-0q8" secondAttribute="bottom" constant="8" id="2gR-nl-EO7"/>
                             <constraint firstItem="tEu-DI-Klm" firstAttribute="top" secondItem="Yep-LV-p74" secondAttribute="bottom" constant="8" id="6gw-3a-GYh"/>
                             <constraint firstItem="MLx-iR-0q8" firstAttribute="top" secondItem="dpQ-0w-b90" secondAttribute="bottom" id="H6M-mt-UIc"/>
                             <constraint firstItem="tEu-DI-Klm" firstAttribute="top" secondItem="Yep-LV-p74" secondAttribute="bottom" constant="8" id="Hij-q1-N7R"/>
                             <constraint firstItem="Yep-LV-p74" firstAttribute="leading" secondItem="Wd5-vN-IrD" secondAttribute="leadingMargin" constant="78" id="Mdl-eR-ev7"/>
-                            <constraint firstAttribute="trailing" secondItem="c7c-eJ-XKP" secondAttribute="trailing" id="U8X-GS-dST"/>
                             <constraint firstItem="JI7-Li-GVs" firstAttribute="leading" secondItem="Wd5-vN-IrD" secondAttribute="leading" id="ZHR-KW-2Y5"/>
                             <constraint firstItem="S1B-rN-9F1" firstAttribute="top" secondItem="tEu-DI-Klm" secondAttribute="bottom" constant="24" id="bWk-1o-PCB"/>
                             <constraint firstItem="S1B-rN-9F1" firstAttribute="trailing" secondItem="Wd5-vN-IrD" secondAttribute="trailingMargin" id="cn7-rk-pej"/>
                             <constraint firstItem="JI7-Li-GVs" firstAttribute="top" secondItem="Wd5-vN-IrD" secondAttribute="top" id="dLb-HV-7e2"/>
                             <constraint firstItem="DKI-lq-HmW" firstAttribute="top" secondItem="JI7-Li-GVs" secondAttribute="bottom" id="fYS-tz-GvW"/>
                             <constraint firstItem="S1B-rN-9F1" firstAttribute="leading" secondItem="Wd5-vN-IrD" secondAttribute="leadingMargin" id="fZy-PU-YNt"/>
-                            <constraint firstItem="DKI-lq-HmW" firstAttribute="top" secondItem="c7c-eJ-XKP" secondAttribute="bottom" id="iqR-NT-2LJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Yep-LV-p74" secondAttribute="trailing" constant="78" id="k1x-We-9nC"/>
-                            <constraint firstItem="c7c-eJ-XKP" firstAttribute="top" secondItem="S1B-rN-9F1" secondAttribute="bottom" constant="8" id="k4t-w8-2KU"/>
                             <constraint firstAttribute="trailing" secondItem="MLx-iR-0q8" secondAttribute="trailing" id="mYL-Ir-ITL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tEu-DI-Klm" secondAttribute="trailing" constant="86" id="nPV-XD-PVe"/>
                             <constraint firstItem="tEu-DI-Klm" firstAttribute="centerX" secondItem="Wd5-vN-IrD" secondAttribute="centerX" id="nnf-NS-Hnf"/>
                             <constraint firstAttribute="trailing" secondItem="JI7-Li-GVs" secondAttribute="trailing" id="shZ-D0-VBC"/>
-                            <constraint firstItem="tEu-DI-Klm" firstAttribute="leading" secondItem="Wd5-vN-IrD" secondAttribute="leadingMargin" constant="85" id="xir-2w-v72"/>
                             <constraint firstItem="S1B-rN-9F1" firstAttribute="top" secondItem="tEu-DI-Klm" secondAttribute="bottom" constant="24" id="yoh-p2-CPf"/>
                             <constraint firstItem="MLx-iR-0q8" firstAttribute="leading" secondItem="Wd5-vN-IrD" secondAttribute="leading" id="zeQ-kL-ftB"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="FXj-Si-sQy" id="qlY-8O-aPH"/>
                         <outlet property="scoreLabel" destination="tEu-DI-Klm" id="gNI-DQ-314"/>
                     </connections>
                 </viewController>
